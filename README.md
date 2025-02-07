@@ -14,12 +14,9 @@ NovelNest is a web platform designed for book lovers to read books online, liste
 ## Pages
 - Signup/Login 
 - Home Page
-
 - Book Details Page
 - Online Read Page
-
 - Favorites Page
-
 - Profile Page
     
 ## 🔹 Roles

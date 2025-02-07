@@ -1,22 +1,38 @@
-# 📖NovelNest
+# 📖NovelNest - A Personalized Book Discovery & Reading Platform
 
-## Overview
-NovelNest is a comprehensive platform for book lovers, offering a seamless experience for buying and selling books, online reading, video reviews, podcasts, and text-to-voice features. It allows users to explore books based on their preferences, watch review videos, listen to podcasts, and even read books online.
+## 🔹 Overview
+NovelNest is a web platform designed for book lovers to read books online, listen via text-to-speech (TTS), watch video reviews, and save favorites. Users receive book recommendations based on their selected preferences during signup and search behavior. The platform enhances the reading experience with audio support and personalized suggestions, making it more accessible and engaging.
 
-This platform aims to create a community-driven reading space where users can discover books, share their thoughts, and engage with literary content in multiple formats.
+## 🔹 Objective
 
-## Objective
+- Provide an interactive and engaging online reading experience.
+- Allow users to listen to books using a text-to-speech(TTS) feature.
+- Offer personalized book recommendations based on user preferences.
+- Enable users to watch video reviews before selecting a book.
+- Allow users to save favorite books for easy access later.
 
-    ✔ Facilitate Easy Buying & Selling of Books – A marketplace where users can list and purchase books.
-    ✔ Enhance Book Discovery – Personalized recommendations based on user preferences.
-    ✔ Provide a Multi-Format Reading Experience – Online reading, audiobooks, and text-to-voice options.
-    ✔ Engage Users with Reviews & Podcasts – Video book reviews and audio discussions to help users make informed choices.
-    ✔ Build a Community for Book Lovers – A space where users can rate, review, and interact with other readers.
+## Pages
+- Signup/Login 
+- Home Page
+
+- Book Details Page (Upon Clicking a Book)
+- Online Read Page
+
+- Favorites Page
+
+- Profile Page
+    
+## 🔹 Roles
+  Users and Admin
 
 
-|Column1  |Column2  |
-|---------|---------|
-|Row1     |         |
-|Row2     |         |
-|Row3     |         |
+## 💻 Tech Stack
+### Frontend (User Interface)
+    🟢 React.js – Interactive UI & dynamic content.
+    🟢 Tailwind CSS – Modern styling.
+
+### Backend (Data & Logic)
+    🟠 Node.js & Express.js – Backend logic & APIs.
+    🟠 MongoDB – Database for books, users, and preferences.
+    🟠 Cloudinary – Storage for video reviews.    
 

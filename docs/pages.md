@@ -22,7 +22,7 @@
 
 ## Profile Page
 ### Users can:
-    Edit personal details.
-    View order history.
-    Logout.
+    1.Edit personal details.
+    2.View order history.
+    3.Logout.
     

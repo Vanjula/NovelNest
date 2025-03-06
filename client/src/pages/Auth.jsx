@@ -44,6 +44,7 @@ const Auth = () => {
 
         // Navigate after successful action
         if (isLogin) {
+          localStorage.setItem("userToken", data.token); // Store token in localStorage
           navigate("/"); // Redirect to Home Page
         } else {
           setIsLogin(true); // Switch to Login Form after Signup
@@ -62,7 +63,7 @@ const Auth = () => {
       className="flex justify-end items-center min-h-screen bg-cover bg-center p-5"
       style={{ backgroundImage: "url('https://e0.pxfuel.com/wallpapers/860/271/desktop-wallpaper-books-library-shelves-lighting-book-library-background-cool-library.jpg')" }}
     >
-      <div className="w-1/3 bg-amber-50 p-10 shadow-lg rounded-lg min-h-[450px] flex flex-col justify-between mr-30 backdrop-blur-lg bg-black/20">
+      <div className="w-1/3  p-10 shadow-lg rounded-lg min-h-[450px] flex flex-col justify-between mr-30 backdrop-blur-lg bg-black/20">
         <h2 className="text-center text-2xl font-semibold mb-4 text-white">NovelNest</h2>
 
         <div className="flex justify-center mb-6 text-white">
@@ -80,31 +81,37 @@ const Auth = () => {
           </button>
         </div>
 
-        <div className="flex-grow flex items-center">
+        <div className="flex-grow flex items-center justify-center">
           <form className="w-full text-white" onSubmit={handleSubmit}>
             {!isLogin && (
               <>
-                <label className="mb-1">Username</label>
-                <input className="mb-3 p-2 border rounded w-full text-white" type="text" name="username" value={formData.username} onChange={handleChange} required />
+                {/* <label className="mb-1">Username</label> */}
+                <input className="mb-3 p-2 border rounded w-full text-white" placeholder="Username" type="text" name="username" value={formData.username} onChange={handleChange} required />
               </>
             )}
 
-            <label className="mb-1">Email</label>
-            <input className="mb-3 p-2 border rounded w-full text-white" type="email" name="email" value={formData.email} onChange={handleChange} required />
+            {/* <label className="mb-1">Email</label> */}
+            <input className="mb-3 p-2 border rounded w-full text-white" placeholder="Email"  type="email" name="email" value={formData.email} onChange={handleChange} required />
 
-            <label className="mb-1">Password</label>
-            <input className="mb-3 p-2 border rounded w-full text-white" type="password" name="password" value={formData.password} onChange={handleChange} required />
+            {/* <label className="mb-1">Password</label> */}
+            <input className="mb-3 p-2 border rounded w-full text-white" placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} required />
 
             {!isLogin && (
               <>
-                <label className="mb-1">Confirm Password</label>
-                <input className="mb-3 p-2 border rounded w-full text-white" type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
+                {/* <label className="mb-1">Confirm Password</label> */}
+                <input className="mb-3 p-2 border rounded w-full text-white"  placeholder="Confirm Password" type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
               </>
             )}
 
-            <button className="bg-amber-200 cursor-pointer text-black px-4 py-2 rounded-full w-full mt-3">
+            <button className="bg-amber-200 cursor-pointer text-black px-4 py-2 rounded-full text-center w-50 mx-auto block mt-3">
               {isLogin ? "Step-in" : "Join"}
             </button>
+            {isLogin && (
+              <p className="text-white text-center mt-4">Don't you have an account?<span className="cursor-pointer ml-2 underline" onClick={() => setIsLogin(false)}>Signup</span></p>
+            )}
+            {!isLogin && (
+              <p className="text-white text-center mt-4">Already have an account?<span className="cursor-pointer ml-2 underline" onClick={() => setIsLogin(true)}>Login</span></p>
+            )}
           </form>
         </div>
       </div>
